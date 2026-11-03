@@ -8,10 +8,10 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xFFFFFF);
 
 const camera = new THREE.PerspectiveCamera(
-  75, 
-  window.innerWidth / window.innerHeight, 
-  0.1, 
-  1000
+  75, //agol, obicno se postavuva od 75 do 90 stepeni
+  window.innerWidth / window.innerHeight,   //aspect ratio, delot kade se crta, ne mora da e na window, tuku
+  0.1,  //ako e 0 moze da se pojavuva i gubi objektot, samo da ne e 0, neshhto pogolemo od 0
+  1000   //od kade do kade moze da gleda kamerata, i ako koci moze da e do ova zohto se trudi da gledamo mnogu daleku, i sistemot se maci
 );
 camera.position.set(8,6,12)
 
